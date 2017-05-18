@@ -5,4 +5,4 @@ tmp/*
 vendor
 vendor/*
 config/.env
-public_html/.htaccess
+public/.htaccess
