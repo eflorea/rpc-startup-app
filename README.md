@@ -33,7 +33,7 @@ This framework has a few system requirements:
 
 The structure of the app is pretty simple:
 * APP
-  * Controller
+    * Controller
     * Home.php
   * Model
     * Row
@@ -66,50 +66,30 @@ All of the configuration files are stored in the config directory in ***.env*** 
 
 ## Configuration ##
 
-You should configure **config/developement.php** and change database connection, app url, timezone and any other settings that your application needs.
+You should configure **config/.env** and change database connection, app url, timezone and any other settings that your application needs.
 Simple configuration files looks like this:
 
-```php
-<?php
+```console
+#example of configuration file
 
-$config = array
-(
+#database
+DB_HOSTNAME="localhost"
+DB_USERNAME="user"
+DB_PASSWORD="pass",
+DB_NAME="db_name"
+DB_PREFIX="t29_"
+DB_PORT=3306,
+DB_SOCKET=""
+DB_ADAPTER="MySQL"
 
-    //database settings
-    'database' => array
-    (
-        'default' => array
-        (
-            'hostname' => 'DB_HOSTNAME',
-            'username' => 'DB_USERNAME',
-            'password' => 'DB_PASSWORD',
-            'database' => 'DB_DATABASE',
-            'prefix' => 't29_',
-            'port' => 3306,
-            'socket' => null,
-            'adapter' => 'MySQL',
-        )
-    ),
+#debugging and logs
+DEBUG_QUERIES=""
+LOGS_ENABLED=false
+LOG_TO_FILE=false
+#LOG_PATH=""
+#LOG_THRESHOLD=""
+#LOG_DATE_FORMAT=""
 
-    'debug' => 'all',
-    //all = show all errors
-    //some = show all errors, notices and warnings
-    //false = no errors displayed
-
-    //main app domain
-    'app_domain' => 'rpc.three29.com',
-
-    //app version
-    'app_version' => '1.0.0',
-
-    //timezone
-    'timezone'  => 'America/Los_Angeles'
-
-);
-
-return $config;
-
-?>
 ```
 
 
