@@ -1,5 +1,5 @@
 {
     "require": {
-        "eflorea/rpc": "1.0.9.5"
+        "eflorea/rpc": "1.*"
     }
 }
