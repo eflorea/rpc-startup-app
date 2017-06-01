@@ -1,3 +1,8 @@
+AuthType Basic
+AuthName "Protected Directory"
+AuthUserFile "/home/three29/.htpasswd"
+require valid-user
+
 RewriteEngine on
 RewriteBase /
 RewriteCond %{SCRIPT_FILENAME} !-f
