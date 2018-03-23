@@ -26,7 +26,7 @@
 
 This framework has a few system requirements:
 
-* PHP >= 5.4.0
+* PHP >= 5.6.0
 * PDO PHP Extension
 
 ## Structure ##
